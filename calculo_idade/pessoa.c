@@ -1,16 +1,15 @@
 #include "pessoa.h"
 
 int calc_idade(Pessoa p, int dia, int mes, int ano_atual){
-    int idade;
-    idade = ano_atual - p.ano;
+    p.idade = ano_atual - p.ano;
     if(mes < p.mes){
-            idade -= 1; //se a pessoa não fez aniversário, é -1 ano;
+            p.idade -= 1; //se a pessoa não fez aniversário, é -1 ano;
         }else{
             if(p.mes == mes){
                 if(p.dia > dia){
-                    idade -= 1;
+                    p.idade -= 1; //como p.idade já é a idade da pessoa, não preciso de uma variável só pra isso
                 }
             }
     };
-    return idade;
+    return p.idade;
 }
