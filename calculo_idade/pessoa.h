@@ -8,6 +8,6 @@ typedef struct {
     int dia, mes, ano, idade;
 } Pessoa;
 
-int calc_idade(Pessoa p, int dia, int mes, int ano_atual);
+void calc_idade(Pessoa *p, int dia, int mes, int ano_atual);
 
 #endif
