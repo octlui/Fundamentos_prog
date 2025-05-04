@@ -1,7 +1,9 @@
 #include "pessoa.h"
+#include <iostream>
+using namespace std;
 #include <string.h>
-
-Pessoa::Pessoa(int diaNa, int mesNa, int anoNa, const char nome[]){ //construtor da classe, inicializa as variaveis
+                                                //usando o nome como ponteiro
+Pessoa::Pessoa(int diaNa, int mesNa, int anoNa, const char* nome){ //construtor da classe, inicializa as variaveis
     diaP = diaNa;
     mesP = mesNa;   //as variaveis dentro de uma classe são chamadas de atributos
     anoP= anoNa;
@@ -20,7 +22,8 @@ void Pessoa::calc_idade(int diaAT, int mesAT, int ano_atualAT){ //funções dent
                 }
             }
     }
-    printf("A idade de %s seria de %d \n", nomeP, idadeP); 
+    //printf("A idade de %s seria de %d \n", nomeP, idadeP); 
+    cout<<"A idade de"<<nomeP<<"seria de"<<idadeP<<endl;//trabalha orientado a fluxo
 }
 int Pessoa::informaIdade(){
     return idadeP;
