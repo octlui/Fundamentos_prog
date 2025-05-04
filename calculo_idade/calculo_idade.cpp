@@ -1,10 +1,20 @@
 #include <stdio.h>
-typedef struct{
-    int diaP, mesP, anoP, idadeP;
+struct Pessoa{
+    public:
+        int diaP, mesP, anoP, idadeP; //informações acessíveis de fora;
+    
+    //função construtora inicializa as variaveis, pega as variaveis do main e atribui a elas os atributos dos objetos
+    Pessoa(int diaNa, int mesNa, int anoNa){
+        diaP = diaNa;
+        mesP = mesNa;
+        anoP= anoNa;
+        idadeP = -1;
+    }
 
+    //função dentro da struct
     void calc_idade(int diaAT, int mesAT, int ano_atualAT){ 
     idadeP = ano_atualAT - anoP;                            
-    if(mesP < mesAT){
+    if(mesAT < mesP){
             idadeP -= 1; //se a pessoa não fez aniversário, é -1 ano;
         }else{
             if(mesP == mesAT){
@@ -14,19 +24,11 @@ typedef struct{
             }
     }
 }
-}Pessoa;
+};
 int main(){
-    Pessoa Newton, Einstein; //agora são objetos do tipo pessoa
     
-    Newton.diaP= 4;
-    Newton.mesP= 1;
-    Newton.anoP= 1643;
-    Newton.idadeP = -1; //inicializar qualquer variável como -1
-
-    Einstein.diaP = 14;
-    Einstein.mesP = 3;
-    Einstein.anoP = 1879;
-    Einstein.idadeP = -1;
+    Pessoa Einstein (14, 3, 1879);
+    Pessoa Newton (4, 1, 1643);
 
     Einstein.calc_idade(11, 1, 2009); //tanto einstein quanto newton tem seu próprio calculo_idade
     Newton.calc_idade(11, 1, 2009); 
