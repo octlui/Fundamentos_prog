@@ -1,9 +1,11 @@
 #include "pessoa.h"
+#include <string.h>
 
-Pessoa::Pessoa(int diaNa, int mesNa, int anoNa){
+Pessoa::Pessoa(int diaNa, int mesNa, int anoNa, const char nome[]){ //construtor da classe, inicializa as variaveis
     diaP = diaNa;
     mesP = mesNa;   //as variaveis dentro de uma classe são chamadas de atributos
     anoP= anoNa;
+    strcpy(nomeP, nome); //strcpy copia o nome do main para o atributo nomeP, é sempre o oposto do que se espera, o primeiro argumento é o destino e o segundo é a origem
     idadeP = -1;
 }
 
@@ -18,6 +20,7 @@ void Pessoa::calc_idade(int diaAT, int mesAT, int ano_atualAT){ //funções dent
                 }
             }
     }
+    printf("A idade de %s seria de %d \n", nomeP, idadeP); 
 }
 int Pessoa::informaIdade(){
     return idadeP;
