@@ -6,6 +6,9 @@ principal::principal(){
 
     executar();
 }
+principal::~principal(){
+
+}
 
 void principal::executar(){
     Einstein.calcula_imprime_idade(11, 1, 2009);

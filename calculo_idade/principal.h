@@ -7,5 +7,6 @@ class principal{
     
     public:
         principal();
+        ~principal(); //destrutora sem parametros
         void executar();
 };
