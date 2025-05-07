@@ -9,6 +9,7 @@ Pessoa::Pessoa(int diaNa, int mesNa, int anoNa, const char* nome){ //construtor 
     anoP= anoNa;
     strcpy(nomeP, nome); //strcpy copia o nome do main para o atributo nomeP, é sempre o oposto do que se espera, o primeiro argumento é o destino e o segundo é a origem
     idadeP = -1;
+    calc_idade(25, 8, 2009);
 }
 
 void Pessoa::calc_idade(int diaAT, int mesAT, int ano_atualAT){ //funções dentro de uma classe são chamadas de métodos  
