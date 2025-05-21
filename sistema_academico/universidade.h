@@ -1,16 +1,16 @@
 #ifndef _UNIVERSIDADE_H_ //evita repetições de inclusões
 #define _UNIVERSIDADE_H_
 
-class universidade{
+class Universidade{
     private:
         char nome[30];
     
     public:
-        universidade(char* n=""); //construtora cujo parâmetro é um valor default
-        ~universidade();
+        Universidade(char* n=""); //construtora cujo parâmetro é um valor default
+        ~Universidade();
 
-        void setNome(char *n);
-        char *getNome();
+        void setNome(char* n);
+        char* getNome();
 };
 
 #endif
